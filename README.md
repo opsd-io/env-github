@@ -34,14 +34,12 @@ The list of related modules.
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.3.1 |
 | <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | >= 3.26.0 |
-| <a name="requirement_random"></a> [random](#requirement\_random) | >=3.4.3 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
 | <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | >= 3.26.0 |
-| <a name="provider_random"></a> [random](#provider\_random) | >=3.4.3 |
 
 ## Modules
 
@@ -54,11 +52,17 @@ No modules.
 | [azurerm_resource_group.tfstate](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/resource_group) | resource |
 | [azurerm_storage_account.tfstate](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account) | resource |
 | [azurerm_storage_container.tfstate](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_container) | resource |
-| [random_string.resource_code](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/string) | resource |
 
 ## Inputs
 
-No inputs.
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_azurerm_resource_group_location"></a> [azurerm\_resource\_group\_location](#input\_azurerm\_resource\_group\_location) | Region in which Azure Resource Group will be created. | `string` | `"North Europe"` | no |
+| <a name="input_azurerm_resource_group_name"></a> [azurerm\_resource\_group\_name](#input\_azurerm\_resource\_group\_name) | Azure Resource Group name in which project will be deployed. | `string` | `"testproject"` | no |
+| <a name="input_azurerm_storage_account_account_kind"></a> [azurerm\_storage\_account\_account\_kind](#input\_azurerm\_storage\_account\_account\_kind) | ... | `string` | `"StorageV2"` | no |
+| <a name="input_azurerm_storage_account_account_replication_type"></a> [azurerm\_storage\_account\_account\_replication\_type](#input\_azurerm\_storage\_account\_account\_replication\_type) | ... | `string` | `"GRS"` | no |
+| <a name="input_azurerm_storage_account_account_tier"></a> [azurerm\_storage\_account\_account\_tier](#input\_azurerm\_storage\_account\_account\_tier) | ... | `string` | `"Standard"` | no |
+| <a name="input_azurerm_storage_account_public_network_access_enabled"></a> [azurerm\_storage\_account\_public\_network\_access\_enabled](#input\_azurerm\_storage\_account\_public\_network\_access\_enabled) | ... | `bool` | `true` | no |
 
 ## Outputs
 
